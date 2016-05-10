@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Wildhack.Models.Article>
+@using Wildhack.Models;
+@{
+    ViewBag.Title = "PenPal";
+}
+
+    <!-- Bootstrap Core CSS -->
+<link href="~/Content/bootstrap.min.css" rel="stylesheet">
+<link href="~/Content/Site.css" rel="stylesheet" />
+<!-- Custom CSS -->
+<link href="~/Content/business-casual.css" rel="stylesheet">
+
+<!-- Bootstrap Switch -->
+<link href="~/Content/bootstrap-switch.min.css" rel="stylesheet">
+
+<!-- My CSS -->
+<link href="~/Content/styles.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<div class="brand">PenPal</div>
+<div class="address-bar">Learn spanish with your virtual pen pal</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html">PenPal</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+    <div class="box">
+        <div class="row">
+            @foreach (Article article in Model)
+            {
+                <div class="col-lg-12" id="passage-box">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Flash Cards @article.Title</strong>
+                    </h2>
+                    <hr>
+                    
+                    <ul id="allStickers">
+                        @foreach (Word word in article.Unknown)
+                        {
+                            @Html.Partial("FlashCards", word);
+                        }
+                    </ul>
+                </div>
+                <hr>
+            }
+            </div>
+    </div>
+
+    <div class="form-inline email-div">
+        <input id="email" type="text" class="form-control" name="email" placeholder="Your Email">
+        <button id="save" class="btn" onclick="sendEmail()">Send me new words!</button>
+    </div>
+
+</div>
+
+<!-- jQuery -->
+<script src="~/Scripts/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<!-- Bootstrap Switch -->
+<script src="~/Scripts/bootstrap-switch.min.js"></script>
+
+<!-- My JavaScript -->
+<script src="~/Scripts/scripts.js"></script>

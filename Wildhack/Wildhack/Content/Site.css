@@ -1,0 +1,157 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.article {
+    cursor: text;
+}
+
+h4.success {
+    font-weight: bold;
+    color: #BDC;
+}
+
+
+.allStickers h2 {
+    font-size: 12px;
+    color: black;
+}
+
+ul#allStickers  {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    perspective: 3300px;
+}
+
+ul#allStickers li {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+ul#allStickers li .front:hover ::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical
+{
+    border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.front, .back, .slide {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.front {
+    background: #5B8FA8;
+}
+
+.back {
+    background: white;
+}
+
+li.sticker-Ask .front {
+    background: #49496E;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+}
+
+li.sticker-Ask .back {
+    padding: 10px;
+    width: 200px;
+    background: #7C7CBB;
+    z-index: 1000;
+}
+
+.sticker {
+    cursor:pointer;
+    position: relative;
+}
+
+.sticker h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sticker h5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+    padding: 5px;
+    background: #84CBEF;
+}
+
+.sticker p {
+    color: white;
+    font-size: 18px;
+}
+
+ul#allStickers li.sticker-Ask:hover .flipper, ul#allStickers li.sticker-Ask.hover .flipper, ul#allStickers li.sticker-Ask.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+ul#allStickers li.sticker-Ask:hover {
+    width: 200px;
+}
+
+ul#allStickers li.sticker-Ask:hover .front {
+    width: 200px;
+}
+
+
+.front .row {
+    margin: 0px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.8s;
+    -webkit-animation-delay: 0.2s; /* Chrome, Safari, Opera */
+    animation-delay: 0.2s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}

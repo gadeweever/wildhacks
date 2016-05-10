@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('div.article').each(function () {
+            var $this = $(this);
+            $this.html($this.text().replace(/\b(\w+)\b/g, "<span>$1</span>"));
+        });
+        $('div.article span').click(
+            function () {
+                if ($(this).hasClass("highlight")) {
+                    $(this).removeClass("highlight");
+                }
+                else {
+                    $(this).addClass("highlight");
+                }
+            }
+        );
+
+        /*
+        $('div.article').on('click', function () {
+                var selection;
+                //Get the selected stuff
+                if (window.getSelection)
+                    selection = window.getSelection();
+                else if (typeof document.selection != "undefined")
+                    selection = document.selection;
+                if (selection.anchorNode.parentNode.className == "highlight") {
+                    console.log("I was here");
+                    selection.anchorNode.parentNode.className = "";
+                } else {
+                    var range = selection.getRangeAt(0);
+                    if (range.commonAncestorContainer.className == "span.highlight") {
+                        console.log("here!");
+                    }
+                    //If the range spans some text, and inside a tag, set its css class.
+                    if (range && !selection.isCollapsed) {
+                        if (selection.anchorNode.parentNode == selection.focusNode.parentNode) {
+                            var span = document.createElement('span');
+                            span.className = 'highlight';
+                            range.surroundContents(span);
+                        }
+                    }
+                }
+        });
+        $("div.article").hover(function(e) {
+            console.log($(e.target).text());
+        });
+        $('div.article').on('mousemove', function (e) {
+            console.log($(e.target).text());
+        });
+        */
+
+
+    });
+
+    function saveVocab(id) {
+        var uWords = [], kWords = [];
+        $("div.article span").each(function () {
+            if ($(this).hasClass("highlight")) {
+                uWords.push($(this).text());
+            }
+            else {
+                kWords.push($(this).text());
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("../Articles/SaveVocab")',
+            traditional: true,
+            data: { "id": id, "uWords": uWords, "kWords": kWords },
+            success: function () {
+                console.log("It worked!");
+            },
+            error: function (request, errorType, errorMessage) {
+                console.log("Error: " + errorMessage);
+            }
+       });
+    }
+
+    function sendEmail()
+    {
+        var email = $("#email").val();
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("../Articles/sendEmail")',
+            traditional: true,
+            data: { "email": email },
+            success: function () {
+                var text = '<h4 class="success">Success!</h4>';
+                $(".email-div").html(text);
+                $(".email-div").delay(3000).fadeOut(400);;
+            },
+            error: function (request, errorType, errorMessage) {
+                console.log("Error: " + errorMessage);
+            }
+        });
+    }
+</script>
+
+<div class="article" id="1">
+    <p>Use this to provide additional information.</p>
+</div>
+
+<button id="save" class="btn btn-sm" onclick="saveVocab(1)">Save!</button>
+<br /><br />
+<div class="email-div">
+    <input id="email" type="text" class="form-control" name="email" placeholder="Your Email">
+    <button id="save" class="btn btn-sm" onclick="sendEmail()">Send me new words!</button>
+</div>

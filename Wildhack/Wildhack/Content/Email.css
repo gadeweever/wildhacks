@@ -1,0 +1,191 @@
+﻿@media only screen and (max-width: 480px) {  
+    body {
+    -webkit-text-size-adjust: none !important;
+  }
+  table {
+    -webkit-text-size-adjust: none !important;
+  }
+  td {
+    -webkit-text-size-adjust: none !important;
+  }
+  p {
+    -webkit-text-size-adjust: none !important;
+  }
+  a {
+    -webkit-text-size-adjust: none !important;
+  }
+  li {
+    -webkit-text-size-adjust: none !important;
+  }
+  blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+  body {
+    width: 100% !important; min-width: 100% !important;
+  }
+  td[id=bodyCell] {
+    padding: 10px !important;
+  }
+  table[class=mcnTextContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnBoxedTextContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcpreview-image-uploader] {
+    width: 100% !important; display: none !important;
+  }
+  img[class=mcnImage] {
+    width: 100% !important;
+  }
+  table[class=mcnImageGroupContentContainer] {
+    width: 100% !important;
+  }
+  td[class=mcnImageGroupContent] {
+    padding: 9px !important;
+  }
+  td[class=mcnImageGroupBlockInner] {
+    padding-bottom: 0 !important; padding-top: 0 !important;
+  }
+  tbody[class=mcnImageGroupBlockOuter] {
+    padding-bottom: 9px !important; padding-top: 9px !important;
+  }
+  table[class=mcnCaptionTopContent] {
+    width: 100% !important;
+  }
+  table[class=mcnCaptionBottomContent] {
+    width: 100% !important;
+  }
+  table[class=mcnCaptionLeftTextContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnCaptionRightTextContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnCaptionLeftImageContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnCaptionRightImageContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnImageCardLeftTextContentContainer] {
+    width: 100% !important;
+  }
+  table[class=mcnImageCardRightTextContentContainer] {
+    width: 100% !important;
+  }
+  td[class=mcnImageCardLeftImageContent] {
+    padding-right: 18px !important; padding-left: 18px !important; padding-bottom: 0 !important;
+  }
+  td[class=mcnImageCardRightImageContent] {
+    padding-right: 18px !important; padding-left: 18px !important; padding-bottom: 0 !important;
+  }
+  td[class=mcnImageCardBottomImageContent] {
+    padding-bottom: 9px !important;
+  }
+  td[class=mcnImageCardTopImageContent] {
+    padding-top: 18px !important;
+  }
+  table[class=mcnCaptionLeftContentOuter] td[class=mcnTextContent] {
+    padding-top: 9px !important;
+  }
+  table[class=mcnCaptionRightContentOuter] td[class=mcnTextContent] {
+    padding-top: 9px !important;
+  }
+  td[class=mcnCaptionBlockInner] table[class=mcnCaptionTopContent]:last-child td[class=mcnTextContent] {
+    padding-top: 18px !important;
+  }
+  td[class=mcnBoxedTextContentColumn] {
+    padding-left: 18px !important; padding-right: 18px !important;
+  }
+  td[class=sectionContainer] {
+    display: block !important; max-width: 600px !important; width: 100% !important;
+  }
+  td[class=mcnTextContent] {
+    padding-right: 18px !important; padding-left: 18px !important;
+  }
+  table[id=templateContainer] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templatePreheader] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateHeader] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateBody] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateBodyInner] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateSidebar] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateSidebarInner] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  table[id=templateFooter] {
+    max-width: 600px !important; width: 100% !important;
+  }
+  h1 {
+    font-size: 24px !important; line-height: 125% !important;
+  }
+  h2 {
+    font-size: 20px !important; line-height: 125% !important;
+  }
+  h3 {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  h4 {
+    font-size: 16px !important; line-height: 125% !important;
+  }
+  table[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] p {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  table[id=templatePreheader] {
+    display: block !important;
+  }
+  td[class=preheaderContainer] td[class=mcnTextContent] {
+    font-size: 14px !important; line-height: 115% !important;
+  }
+  td[class=preheaderContainer] td[class=mcnTextContent] p {
+    font-size: 14px !important; line-height: 115% !important;
+  }
+  td[class=headerContainer] td[class=mcnTextContent] {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=headerContainer] td[class=mcnTextContent] p {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=bodyContainer] td[class=mcnTextContent] {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=bodyContainer] td[class=mcnTextContent] p {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=sidebarContainer] td[class=mcnTextContent] {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  td[class=sidebarContainer] td[class=mcnTextContent] p {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  table[id=templateSidebar] {
+    border-left: 0 !important; border-right: 0 !important;
+  }
+  table[id=templateSidebarInner] {
+    border-left: 0 !important; border-right: 0 !important;
+  }
+  td[class=footerContainer] td[class=mcnTextContent] {
+    font-size: 14px !important; line-height: 115% !important;
+  }
+  td[class=footerContainer] td[class=mcnTextContent] p {
+    font-size: 14px !important; line-height: 115% !important;
+  }
+  td[class=footerContainer] a[class=utilityLink] {
+    display: block !important;
+  }
+}

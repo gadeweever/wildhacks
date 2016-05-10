@@ -1,0 +1,82 @@
+div {
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition:    all 400ms ease-in-out 0s;
+    -o-transition:      all 400ms ease-in-out 0s;
+    transition:         all 400ms ease-in-out 0s;  
+}
+
+.highlight {
+    background-color: #40DF6E;
+}
+
+.col-lg-0 {
+    display: none;
+}
+
+.email-div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#email {
+    width: 25%;
+}
+
+.each {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#next-article, .next-article {
+    margin-right: 4%;
+    float: right;
+}
+
+#save-vocab {
+    margin-left: 43%;
+}
+
+.btn1 {
+  background: none;
+  color: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  display: inline-block;
+}
+
+.btn2 {
+    float: right;
+    margin-right: 25px;
+}
+
+.btn-ghost {
+  border: 2px solid #000;
+  color: #000;
+  -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+}
+.btn-ghost:hover {
+  background-color: #114 !important;
+  color: #fff !important;
+}
+
+.btn-skew {
+  -webkit-transform: skew(-10deg);
+      -ms-transform: skew(-10deg);
+          transform: skew(-10deg);
+}
+.btn-skew > span {
+  display: inline-block;
+  -webkit-transform: skew(10deg);
+      -ms-transform: skew(10deg);
+          transform: skew(10deg);
+}
